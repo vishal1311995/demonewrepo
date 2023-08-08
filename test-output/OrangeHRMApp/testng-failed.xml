@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [OrangeHRMApp]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="browsername" value="chrome"/>
+    <groups>
+      <run>
+        <include name="EndToEndTesting"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestLayer.LoginPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="validateLoginPageFunctionaliy"/>
+        </methods>
+      </class> <!-- TestLayer.LoginPageTest -->
+      <class name="TestLayer.PIMPageTest">
+        <methods>
+          <include name="validateAddPersonalDetails"/>
+        </methods>
+      </class> <!-- TestLayer.PIMPageTest -->
+      <class name="TestLayer.HomePageTest">
+        <methods>
+          <include name="validateHomePageTitle"/>
+          <include name="validateHomePageLogo"/>
+          <include name="validateHomePageUrl"/>
+        </methods>
+      </class> <!-- TestLayer.HomePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [OrangeHRMApp] -->
